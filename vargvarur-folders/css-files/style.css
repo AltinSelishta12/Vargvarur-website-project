@@ -355,3 +355,35 @@ header::before{
         flex-direction: column;
     }
 }
+
+/*769-1024px breakpoint*/
+
+@media(min-width:769px) and (max-width:1024px){
+    .header-sllogan{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .header-sllogan h2{
+       font-size: clamp( 4rem, 5vw, 4.5rem);
+       width: clamp(60%, 65%, 70%);
+    }
+    .header-footer-info{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    .header-footer-info p{
+        width: clamp(60%, 90% , 100%);
+    }
+    .header-footer-btn{
+        width: clamp(40%, 70%, 90%);
+    }
+    .header-nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+    }
+}
