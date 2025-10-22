@@ -11,3 +11,14 @@ openBtn.addEventListener("click", function(){
 CloseMenu.addEventListener("click", function(){
     ShowMenu.classList.remove("active");
 })
+
+const topImg = document.querySelector("#topImg");
+const topImgText = document.querySelector("#topImgText");
+
+topImg.addEventListener("mouseover", function(){
+   topImgText.classList.add("show");
+});
+
+topImg.addEventListener("mouseout", function(){
+    topImgText.classList.remove("show");
+})
