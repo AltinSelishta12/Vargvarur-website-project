@@ -12,13 +12,18 @@ CloseMenu.addEventListener("click", function(){
     ShowMenu.classList.remove("active");
 })
 
-const topImg = document.querySelector("#topImg");
-const topImgText = document.querySelector("#topImgText");
+//Hover animation for marketing section frames
 
-topImg.addEventListener("mouseover", function(){
-   topImgText.classList.add("show");
+
+const Imgbox = document.querySelectorAll(" .Imgbox");
+const ImgText = document.querySelectorAll(" .ImgText");
+
+Imgbox.forEach((box, index) => {
+     box.addEventListener("mouseover", function(){
+   ImgText[index].classList.add("show");
 });
 
-topImg.addEventListener("mouseout", function(){
-    topImgText.classList.remove("show");
+box.addEventListener("mouseout", function(){
+    ImgText[index].classList.remove("show");
+})
 })
