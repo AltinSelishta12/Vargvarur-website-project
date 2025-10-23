@@ -26,4 +26,18 @@ Imgbox.forEach((box, index) => {
 box.addEventListener("mouseout", function(){
     ImgText[index].classList.remove("show");
 })
-})
+});
+
+
+//frames-marketing-section appearing section
+
+const framesMarketing = document.querySelector(".frames-marketing");
+
+window.addEventListener("scroll", function(){
+    if(this.window.scrollY > 350){
+        framesMarketing.classList.add("Show");
+    }
+    else{
+        framesMarketing.classList.remove("Show");
+    }
+});

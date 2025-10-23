@@ -414,9 +414,13 @@ header::before{
     max-width: 1440px;
     width: 100%;
     display: flex;
+    opacity: 0;
     flex-direction: column;
+    transition: opacity 0.7s linear;
 }
-
+.frames-marketing.Show{
+    opacity: 1;
+}
 .frames-marketing-header{
     width: 100%;
     height: 20vh;
@@ -430,17 +434,6 @@ header::before{
     font-weight: 400;
     font-size: var(--medium-large-font);
     width: 50%;
-    animation: marketing-header 0.8s forwards;
-    animation-timeline: view();
-    animation-range: 0% 50%;
-}
-@keyframes marketing-header{
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
 }
 .frames-marketing-body{
     height: 180vh;
@@ -452,22 +445,9 @@ header::before{
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    animation: top-img 0.8s;
-    animation-timeline: view();
-    animation-range: 0% 30%;
+    padding-left: 3%;
 }
-@keyframes top-img{
-    0%{
-        transform: scale(0);
-    }
-    100%{
-        transform: scale(1);
-    }
-}
-.frames-marketing-right{
-    background-color: rgb(54, 109, 109);
-    width: 50%;
-}
+
 .top-img{
     width: 90%;
     height: 50%;
@@ -606,5 +586,96 @@ header::before{
     font-family: 'Questrial';
     color: var(--main-color);
     font-weight: 400;
+}
+/*Here goes right side of frames marketing section*/
 
+.frames-marketing-right{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-left: 4%;
+    flex-direction: column;
+}
+.birthday-img{
+    background-image: url(../images-folder/marketing-images/birthday-img.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 90%;
+    height: 70%;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    transition: transform 0.3s linear;
+}
+.birthday-img:hover{
+    transform: scale(0.98);
+}
+.birthday-img-content{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 0.8s linear;
+    background: linear-gradient(to top, #000, #00000007);
+}
+.birthday-img-content.show{
+    opacity: 1;
+}
+.birthday-img-title{
+    width: 100%;
+    padding: 2% 4%;
+}
+.birthday-img-title h3{
+    font-family: 'Questrial';
+    font-weight: 500;
+    color: var(--main-color);
+    font-size: 2rem;
+    position: relative;
+    padding-bottom: 4%;
+}
+.birthday-img-title h3::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 5%;
+    height: 4px;
+    background-color: var(--main-color);
+}
+.birthday-img-text{
+    width: 92%;
+    font-family: 'Questrial';
+    color: var(--main-color);
+    font-weight: 400;
+    padding-bottom: 7%;
+}
+.marketing-section-bottom-sllogan{
+    width: 90%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.marketing-section-bottom-sllogan h4{
+    font-family: 'Questrial';
+    color: var(--secondary-color);
+    font-weight: 400;
+    font-size: 4rem;
+    text-align: center;
+    width: 70%;
+    padding-top: 5%;
+}
+.marketing-section-bottom-sllogan span{
+    background-color: #b49393;
+    color: var(--main-color);
+    padding: 1%;
+    border-radius: 15px;
+    
 }
