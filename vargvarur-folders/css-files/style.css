@@ -314,6 +314,57 @@ header::before{
         flex-direction: column;
         background-color: rgba(0, 0, 0, 0.568);
     }
+
+    /*Here ends header responsive design*/
+    
+    .frames-marketing .frames-marketing-header h2{
+        font-size: clamp( 2.5rem, 4.5vw, 5rem);
+        width: 100%;
+        text-align: center;
+    }
+     .frames-marketing-body{
+        display: flex;
+        flex-direction: column;
+    }
+    .frames-marketing-body .frames-marketing-left{
+        width: 100%;
+        padding-left: 0%;
+    }
+    .top-img .top-img-text{
+        opacity: 1;
+    }
+    .top-img-text .title-description-text p{
+        padding-top: 1%;
+    }
+    .frames-marketing-left .bottom-box{
+        height: 60vh;
+        margin-top: 3%;
+    }
+    .frames-marketing-left .bottom-box-text h3{
+        font-size: clamp(2rem, 3vw, 3.4rem);
+    }
+    .bottom-box-img .bottom-box-img-content{
+        opacity: 1;
+    }
+    .frames-marketing-body .frames-marketing-right{
+        width: 100%;
+    }
+    .frames-marketing-body .frames-marketing-right .birthday-img{
+        height: 60vh;
+        margin-top: 3%;
+        padding-bottom: 0%;
+        width: 95%;
+    }
+    .birthday-img .birthday-img-content{
+        opacity: 1;
+    }
+    .birthday-img-content .birthday-img-text {
+        height: 4vh;
+    }
+    .frames-marketing-body .frames-marketing-right .marketing-section-bottom-sllogan h4{
+        width: 90%;
+        font-size: clamp(3rem, 3.5vw, 4rem);
+    }
 }
 
 /*481-650px breakpoint*/
